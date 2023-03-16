@@ -2,7 +2,7 @@
 
 百度智能云播放器 Android SDK(以下简称“SDK”）是百度智能云推出的 Android 平台视频播放器软件开发工具包 (SDK)，为 Android 开发者提供简单、便捷的开发接口，帮助开发者在 Android 移动设备上实现媒体播放功能。SDK 提供简单、便捷的媒体应用开发能力。
 
-在标准版SDK之外，还提供了高级版SDK，包含有全景声（WANOS）音频格式解码与音效处理、HDR多标准视频解码与渲染、超低延时直播等高级功能，为用户带来更丰富的音视频体验。
+在标准版SDK之外，还提供了高级版SDK，包含有全景声（WANOS）音频格式解码与音效处理、HDR多标准视频解码与渲染、超低延时直播、VR视频播放、智能防挡弹幕、投屏等高级功能，为用户带来更丰富的音视频体验。
 
 
 | 终端类别 | Demo体验 | 下载地址 | API参考 | 帮助文档 |
@@ -37,18 +37,24 @@ defaultConfig {
 dependencies {
     // 按需在以下四个版本的baiduPlayerSDK中选择一个即可
     // 流媒体标准版
-    implementation "com.baidubce.mediasdk:baiduPlayerSDK:3.0.0"
+    implementation "com.baidubce.mediasdk:baiduPlayerSDK:3.5.0"
     // 全媒体标准版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full:3.0.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full:3.5.0"
     // 流媒体高级版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-advance:3.0.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-advance:3.5.0"
     // 全媒体高级版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full-advance:3.0.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full-advance:3.5.0"
     
-    implementation "com.baidubce.mediasdk:playerlicense:3.0.0"
-    implementation "com.baidubce.mediasdk:videocache:3.0.0"
+    implementation "com.baidubce.mediasdk:playerlicense:3.5.0"
+    implementation "com.baidubce.mediasdk:videocache:3.5.0"
+    // HDR组件
     implementation "com.baidubce.mediasdk:hdrkit:1.0.0"
+    // VR组件
+    implementation "com.baidubce.mediasdk:vrkit:1.0.0"
+    // 超低延时组件
     implementation "com.baidubce.mediasdk:rtcplayer-wrapper:1.0.24"
+    // 投屏组件
+    implementation "com.baidubce.mediasdk:projection-wrapper:1.0.4"
 }
 ```
 
@@ -77,3 +83,12 @@ HDR视频具有高动态范围、宽色域、高位深的特点，可以呈现�
 在高级版SDK中，我们不仅提供了超低延时直播的播放端支持，还利用UDP信令方案进一步优化首屏时间，同时支持H264/HEVC视频编码和AAC音频编码，还提供了对B帧的支持。
 
 [百度智能云音视频直播（LSS）](https://cloud.baidu.com/product/lss.html)支持超低延时直播的推流、分发，如您有接入需求，请提交工单或联系您的客户经理。
+
+#### VR视频播放
+在高级版SDK中，提供了VR全景视频的高性能渲染能力，支持点播、直播流，同时支持基于陀螺仪的视角控制。
+
+#### 智能防挡弹幕
+利用[百度智能云音视频处理（MCP)](https://cloud.baidu.com/product/mct.html)对视频中的人体、人脸等重要信息进行预先分析并生成蒙版，可以在高级版SDK中实现防挡弹幕效果，保留弹幕互动性的同时不遮挡画面重要内容，提升用户体验。
+
+#### 投屏
+在高级版SDK中，提供了DLNA投屏能力，允许用户将手机端的多媒体内容投送到盒子、投影、电视等大屏设备上，并且可以在手机端控制大屏端的媒体播放。
