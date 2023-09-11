@@ -37,24 +37,26 @@ defaultConfig {
 dependencies {
     // 按需在以下四个版本的baiduPlayerSDK中选择一个即可
     // 流媒体标准版
-    implementation "com.baidubce.mediasdk:baiduPlayerSDK:3.6.0"
+    implementation "com.baidubce.mediasdk:baiduPlayerSDK:3.7.0"
     // 全媒体标准版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full:3.6.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full:3.7.0"
     // 流媒体高级版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-advance:3.6.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-advance:3.7.0"
     // 全媒体高级版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full-advance:3.6.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full-advance:3.7.0"
     
-    implementation "com.baidubce.mediasdk:playerlicense:3.6.0"
-    implementation "com.baidubce.mediasdk:videocache:3.6.0"
+    implementation "com.baidubce.mediasdk:playerlicense:3.7.0"
+    implementation "com.baidubce.mediasdk:videocache:3.7.0"
+    implementation "com.baidubce.mediasdk:danmaku-wrapper:1.0.0"
+    // 以下组件为高级版特有
     // HDR组件
     implementation "com.baidubce.mediasdk:hdrkit:1.0.1"
-    // VR组件
-    implementation "com.baidubce.mediasdk:vrkit:1.0.0"
     // 超低延时组件
     implementation "com.baidubce.mediasdk:rtcplayer-wrapper:1.0.24"
     // 投屏组件
-    implementation "com.baidubce.mediasdk:projection-wrapper:1.0.4"
+    implementation "com.baidubce.mediasdk:projection-wrapper:1.0.5"
+    // VR组件
+    implementation "com.baidubce.mediasdk:vrkit:1.0.0"
     // 绿幕抠像组件
     implementation "com.baidubce.mediasdk:virtualLiveKit:1.0.0"
 }
