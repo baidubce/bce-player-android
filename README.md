@@ -37,16 +37,16 @@ defaultConfig {
 dependencies {
     // 按需在以下四个版本的baiduPlayerSDK中选择一个即可
     // 流媒体标准版
-    implementation "com.baidubce.mediasdk:baiduPlayerSDK:3.7.0"
+    implementation "com.baidubce.mediasdk:baiduPlayerSDK:3.8.0"
     // 全媒体标准版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full:3.7.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full:3.8.0"
     // 流媒体高级版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-advance:3.7.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-advance:3.8.0"
     // 全媒体高级版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full-advance:3.7.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full-advance:3.8.0"
     
-    implementation "com.baidubce.mediasdk:playerlicense:3.7.0"
-    implementation "com.baidubce.mediasdk:videocache:3.7.0"
+    implementation "com.baidubce.mediasdk:playerlicense:3.8.0"
+    implementation "com.baidubce.mediasdk:videocache:3.8.0"
     implementation "com.baidubce.mediasdk:danmaku-wrapper:1.0.0"
     // 以下组件为高级版特有
     // HDR组件
