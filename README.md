@@ -2,7 +2,7 @@
 
 百度智能云播放器 Android SDK(以下简称“SDK”）是百度智能云推出的 Android 平台视频播放器软件开发工具包 (SDK)，为 Android 开发者提供简单、便捷的开发接口，帮助开发者在 Android 移动设备上实现媒体播放功能。SDK 提供简单、便捷的媒体应用开发能力。
 
-在标准版SDK之外，还提供了高级版SDK，包含有全景声（WANOS）音频格式解码与音效处理、HDR多标准视频解码与渲染、超低延时直播、VR视频播放、智能防挡弹幕、投屏、绿幕抠图等高级功能，为用户带来更丰富的音视频体验。
+在标准版SDK之外，还提供了高级版SDK，包含有全景声（WANOS）音频格式解码与音效处理、HDR多标准视频解码与渲染、超低延时直播、VR视频播放、智能防挡弹幕、投屏、绿幕抠图、端上超分等高级功能，这些高级功能也可以作为独立组件单独集成，为用户带来更丰富的音视频体验。
 
 
 | 终端类别 | Demo体验 | 下载地址 | API参考 | 帮助文档 |
@@ -37,28 +37,33 @@ defaultConfig {
 dependencies {
     // 按需在以下四个版本的baiduPlayerSDK中选择一个即可
     // 流媒体标准版
-    implementation "com.baidubce.mediasdk:baiduPlayerSDK:3.8.0"
+    implementation "com.baidubce.mediasdk:baiduPlayerSDK:3.9.0"
     // 全媒体标准版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full:3.8.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full:3.9.0"
     // 流媒体高级版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-advance:3.8.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-advance:3.9.0"
     // 全媒体高级版
-    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full-advance:3.8.0"
+    // implementation "com.baidubce.mediasdk:baiduPlayerSDK-full-advance:3.9.0"
     
-    implementation "com.baidubce.mediasdk:playerlicense:3.8.0"
-    implementation "com.baidubce.mediasdk:videocache:3.8.0"
+    implementation "com.baidubce.mediasdk:playerlicense:3.9.0"
+    implementation "com.baidubce.mediasdk:videocache:3.9.0"
+    // 弹幕组件
     implementation "com.baidubce.mediasdk:danmaku-wrapper:1.0.0"
     // 以下组件为高级版特有
+    // 视频后处理组件
+    implementation "com.baidubce.mediasdk:videoProcessor:1.0.5"
     // HDR组件
-    implementation "com.baidubce.mediasdk:hdrkit:1.0.1"
+    implementation "com.baidubce.mediasdk:hdrkit:1.0.5"
+    // 绿幕抠像组件
+    implementation "com.baidubce.mediasdk:virtualLiveKit:1.0.5"
+    // 端上超分组件
+    implementation "com.baidubce.mediasdk:srkit:1.0.5"
     // 超低延时组件
     implementation "com.baidubce.mediasdk:rtcplayer-wrapper:1.0.24"
     // 投屏组件
     implementation "com.baidubce.mediasdk:projection-wrapper:1.0.5"
     // VR组件
     implementation "com.baidubce.mediasdk:vrkit:1.0.0"
-    // 绿幕抠像组件
-    implementation "com.baidubce.mediasdk:virtualLiveKit:1.0.0"
 }
 ```
 
@@ -117,3 +122,9 @@ HDR视频具有高动态范围、宽色域、高位深的特点，可以呈现�
 在高级版SDK中，提供了高精度、高性能的绿幕抠图能力，可实现对绿色或其他纯色背景的自动识别和抠像，背景可以实时替换为2D视频画面或虚拟3D场景，适用于电商直播、虚拟主播、元宇宙直播等场景。绿幕抠图功能可以配合播放内核使用，也支持作为独立组件单独使用。
 
 - [Android端绿幕抠图功能接入](https://cloud.baidu.com/doc/VideoCreatingSDK/s/Rliij6p24)
+
+
+### 端上超分
+在高级版SDK中，提供了客户端超分辨率能力，利用端侧推理实现对低分辨率画面的清晰度提升、噪声和块效应去除，适用于视频播放场景和RTC通话场景。端上超分功能可以配合播放内核使用，也支持作为独立组件单独使用。
+
+- [Android端上超分功能接入](https://cloud.baidu.com/doc/VideoCreatingSDK/s/Dlu6wi706)
